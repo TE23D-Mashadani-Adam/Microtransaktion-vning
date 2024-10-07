@@ -1,0 +1,14 @@
+C:\Users\adam.mashadani\Documents\Programmering\MicrotransaktionÖvning\MicrotransactionStore\obj\Debug\net8.0\MicrotransactionStore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adam.mashadani\Documents\Programmering\MicrotransaktionÖvning\MicrotransactionStore\obj\Debug\net8.0\MicrotransactionStore.AssemblyInfoInputs.cache
+C:\Users\adam.mashadani\Documents\Programmering\MicrotransaktionÖvning\MicrotransactionStore\obj\Debug\net8.0\MicrotransactionStore.AssemblyInfo.cs
+C:\Users\adam.mashadani\Documents\Programmering\MicrotransaktionÖvning\MicrotransactionStore\obj\Debug\net8.0\MicrotransactionStore.csproj.CoreCompileInputs.cache
+c:\Users\adam.mashadani\Documents\Programmering\MicrotransaktionÖvning\MicrotransactionStore\bin\Debug\net8.0\MicrotransactionStore.exe
+c:\Users\adam.mashadani\Documents\Programmering\MicrotransaktionÖvning\MicrotransactionStore\bin\Debug\net8.0\MicrotransactionStore.deps.json
+c:\Users\adam.mashadani\Documents\Programmering\MicrotransaktionÖvning\MicrotransactionStore\bin\Debug\net8.0\MicrotransactionStore.runtimeconfig.json
+c:\Users\adam.mashadani\Documents\Programmering\MicrotransaktionÖvning\MicrotransactionStore\bin\Debug\net8.0\MicrotransactionStore.dll
+c:\Users\adam.mashadani\Documents\Programmering\MicrotransaktionÖvning\MicrotransactionStore\bin\Debug\net8.0\MicrotransactionStore.pdb
+c:\Users\adam.mashadani\Documents\Programmering\MicrotransaktionÖvning\MicrotransactionStore\obj\Debug\net8.0\MicrotransactionStore.dll
+c:\Users\adam.mashadani\Documents\Programmering\MicrotransaktionÖvning\MicrotransactionStore\obj\Debug\net8.0\refint\MicrotransactionStore.dll
+c:\Users\adam.mashadani\Documents\Programmering\MicrotransaktionÖvning\MicrotransactionStore\obj\Debug\net8.0\MicrotransactionStore.pdb
+c:\Users\adam.mashadani\Documents\Programmering\MicrotransaktionÖvning\MicrotransactionStore\obj\Debug\net8.0\MicrotransactionStore.genruntimeconfig.cache
+c:\Users\adam.mashadani\Documents\Programmering\MicrotransaktionÖvning\MicrotransactionStore\obj\Debug\net8.0\ref\MicrotransactionStore.dll

@@ -13,7 +13,7 @@ dictionary.Add("Chips", 40);
 bool checkOut = false;
 int price = 0;
 
-List<string> cart = [];
+List<string> cart =  new List<string>();
 
 while (!checkOut)
 {
@@ -25,11 +25,11 @@ while (!checkOut)
     Console.WriteLine("\n" + "Välj en produkt att köpa med produkterns siffra");
     bool correctParse = false;
     int produkt1 = 0;
-    while (!correctParse || produkt1 < 0 || produkt1 > produkter.Length)
+    while (!correctParse || produkt1 <= 0 || produkt1 > produkter.Length)
     {
         string produkt1String = Console.ReadLine();
         correctParse = int.TryParse(produkt1String, out produkt1);
-        if (!correctParse || produkt1 > 0 || produkt1 < produkter.Length + 1)
+        if (!correctParse || produkt1 - 1 < 0 || produkt1 > produkter.Length)
         {
             Console.WriteLine("Skriv ett giltigt siffra");
         }
@@ -45,7 +45,7 @@ while (!checkOut)
     Console.WriteLine("Din kundvagn:");
     for (int i = 1; i <= cart.Count; i++)
     {
-        Console.WriteLine(cart[i] + "\n");
+        Console.WriteLine(cart[i - 1] + $" {dictionary[cart[i - 1]]}kr" + "\n");
     }
 
     Console.WriteLine("Vill du gå till betalnig, skriv in 'ja', om inte skriv vad som helst och fortsätt att handla");
@@ -57,7 +57,7 @@ while (!checkOut)
     }
 
 
-}
+}   
 
 if (money >= price)
 {

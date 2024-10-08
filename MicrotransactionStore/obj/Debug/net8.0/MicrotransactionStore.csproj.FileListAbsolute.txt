@@ -12,3 +12,4 @@ c:\Users\adam.mashadani\Documents\Programmering\MicrotransaktionÖvning\Microtra
 c:\Users\adam.mashadani\Documents\Programmering\MicrotransaktionÖvning\MicrotransactionStore\obj\Debug\net8.0\MicrotransactionStore.pdb
 c:\Users\adam.mashadani\Documents\Programmering\MicrotransaktionÖvning\MicrotransactionStore\obj\Debug\net8.0\MicrotransactionStore.genruntimeconfig.cache
 c:\Users\adam.mashadani\Documents\Programmering\MicrotransaktionÖvning\MicrotransactionStore\obj\Debug\net8.0\ref\MicrotransactionStore.dll
+C:\Users\adam.mashadani\Documents\Programmering\MicrotransaktionÖvning\MicrotransactionStore\obj\Debug\net8.0\MicrotransactionStore.sourcelink.json

@@ -46,10 +46,7 @@ while (true)
         }
 
         Console.WriteLine("Din kundvagn:");
-        for (int i = 1; i <= cart.Count; i++)
-        {
-            Console.WriteLine(cart[i - 1] + $" {dictionary[cart[i - 1]]}kr");
-        }
+        showCart(cart);
 
         Console.WriteLine("Vill du gå till betalnig, skriv in 'ja', om inte skriv vad som helst och fortsätt att handla");
         string proceedCheckout = Console.ReadLine().ToLower();
@@ -84,17 +81,21 @@ while (true)
                     Console.WriteLine("Snälla skriv ett fuc*ing nummer!!");
                 }
             }
-            cart.Remove(cart[productNum]);
-            price -= dictionary[produkter[productNum]];
+            cart.Remove(produkter[productNum - 1]);
+            price -= dictionary[produkter[productNum - 1]];
             Console.WriteLine($"Price: {price}");
+            Console.WriteLine("Din kundvagn:");
+            showCart(cart);
 
-            if(money >= price)
+            if (money >= price)
             {
                 break;
             }
         }
 
         CheckoutStep();
+
+        Console.ReadLine();
 
     }
 
@@ -110,4 +111,12 @@ void CheckoutStep()
     Console.ReadLine();
     money -= price;
     Console.WriteLine($"Pengar : {money} kr");
+}
+
+void showCart(List<string> cart)
+{
+    for (int i = 1; i <= cart.Count; i++)
+    {
+        Console.WriteLine($"{i} " + cart[i - 1] + $" {dictionary[cart[i - 1]]}kr");
+    }
 }

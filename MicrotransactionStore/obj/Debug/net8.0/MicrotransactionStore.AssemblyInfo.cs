@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MicrotransactionStore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+747bb0192212f126a06af4fb5ee4712f3264d379")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c877404eba5eb75c3fbcf445b56a981f4af91d2f")]
 [assembly: System.Reflection.AssemblyProductAttribute("MicrotransactionStore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MicrotransactionStore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

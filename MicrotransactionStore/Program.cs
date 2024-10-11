@@ -13,61 +13,101 @@ dictionary.Add("Chips", 40);
 bool checkOut = false;
 int price = 0;
 
-List<string> cart =  new List<string>();
+List<string> cart = new List<string>();
 
-while (!checkOut)
+while (true)
 {
-    Console.WriteLine("Produkter:");
-    for (int i = 0; i < produkter.Length; i++)
+    checkOut = false;
+
+    while (!checkOut)
     {
-        Console.WriteLine($"{i + 1}. {produkter[i]}");
-    }
-    Console.WriteLine("\n" + "Välj en produkt att köpa med produkterns siffra");
-    bool correctParse = false;
-    int produkt1 = 0;
-    while (!correctParse || produkt1 <= 0 || produkt1 > produkter.Length)
-    {
-        string produkt1String = Console.ReadLine();
-        correctParse = int.TryParse(produkt1String, out produkt1);
-        if (!correctParse || produkt1 - 1 < 0 || produkt1 > produkter.Length)
+        Console.WriteLine("Produkter:");
+        for (int i = 0; i < produkter.Length; i++)
         {
-            Console.WriteLine("Skriv ett giltigt siffra");
+            Console.WriteLine($"{i + 1}. {produkter[i]}");
         }
+        Console.WriteLine("\n" + "Välj en produkt att köpa med produkterns siffra");
+        bool correctParse = false;
+        int produkt1 = 0;
+        while (!correctParse || produkt1 <= 0 || produkt1 > produkter.Length)
+        {
+            string produkt1String = Console.ReadLine();
+            correctParse = int.TryParse(produkt1String, out produkt1);
+            if (!correctParse || produkt1 - 1 < 0 || produkt1 > produkter.Length)
+            {
+                Console.WriteLine("Skriv ett giltigt siffra");
+            }
+        }
+
+        if (dictionary.ContainsKey(produkter[produkt1 - 1]))
+        {
+            cart.Add(produkter[produkt1 - 1]);
+            price += dictionary[produkter[produkt1 - 1]];
+        }
+
+        Console.WriteLine("Din kundvagn:");
+        for (int i = 1; i <= cart.Count; i++)
+        {
+            Console.WriteLine(cart[i - 1] + $" {dictionary[cart[i - 1]]}kr");
+        }
+
+        Console.WriteLine("Vill du gå till betalnig, skriv in 'ja', om inte skriv vad som helst och fortsätt att handla");
+        string proceedCheckout = Console.ReadLine().ToLower();
+
+        if (proceedCheckout == "ja")
+        {
+            checkOut = true;
+            Console.WriteLine(price);
+        }
+
+
     }
 
-    if (dictionary.ContainsKey(produkter[produkt1 - 1]))
+    if (money >= price)
     {
-        money -= dictionary[produkter[produkt1 - 1]];
-        cart.Add(produkter[produkt1 - 1]);
-        price += dictionary[produkter[produkt1 - 1]];
+        CheckoutStep();
     }
-
-    Console.WriteLine("Din kundvagn:");
-    for (int i = 1; i <= cart.Count; i++)
+    else
     {
-        Console.WriteLine(cart[i - 1] + $" {dictionary[cart[i - 1]]}kr" + "\n");
+        Console.WriteLine("Du har inte tillräckligt med pengar, välj en siffra av listan som du vill ta bort");
+        while (price > money)
+        {
+            Console.WriteLine("Ange en siffra");
+            string productNumString = Console.ReadLine();
+            int productNum = 0;
+            bool trueParseNum = false;
+            while (!trueParseNum)
+            {
+                trueParseNum = int.TryParse(productNumString, out productNum);
+                if (!trueParseNum)
+                {
+                    Console.WriteLine("Snälla skriv ett fuc*ing nummer!!");
+                }
+            }
+            cart.Remove(cart[productNum]);
+            price -= dictionary[produkter[productNum]];
+            Console.WriteLine($"Price: {price}");
+
+            if(money >= price)
+            {
+                break;
+            }
+        }
+
+        CheckoutStep();
+
     }
 
-    Console.WriteLine("Vill du gå till betalnig, skriv in 'ja', om inte skriv vad som helst och fortsätt att handla");
-    string proceedCheckout = Console.ReadLine().ToLower();
 
-    if (proceedCheckout == "ja")
-    {
-        checkOut = true;
-    }
+}
 
+Console.ReadLine();
 
-}   
-
-if (money >= price)
+void CheckoutStep()
 {
     Console.WriteLine($"Pris : {price}");
     Console.WriteLine("Tryck enter för att betala" + "\n");
+    Console.ReadLine();
+    money -= price;
+    Console.WriteLine($"Pengar : {money} kr");
 }
-else
-{
-    Console.WriteLine("Du har inte tillräckligt med pengar");
-}
-
-
-Console.ReadLine();
